@@ -75,7 +75,7 @@ export const DEMO_REVIEWS = [
 ];
 
 export const INITIAL_CUSTOMER_PROFILE = {
-  name: "Priya Sundaram",
+  name: "P Lakshmi Venkatesh",
   email: "priya.sundaram@example.com",
   phone: "9876543210",
   addresses: [
@@ -103,7 +103,7 @@ export const INITIAL_SAMPLE_ORDERS = [
     orderId: "BKR-2026-0001",
     date: "2026-11-20T10:30:00.000Z",
     customer: {
-      name: "Priya Sundaram",
+      name: "P Lakshmi Venkatesh",
       email: "priya.sundaram@example.com",
       phone: "9876543210",
       type: "delivery",
