@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bakery-vanilla: #FDF8F5;
+  --color-bakery-card: #FFFDFB;
+  --color-bakery-blackberry: #1E152A;
+  --color-bakery-caramel: #D95D39;
+  --color-bakery-caramelHover: #B84625;
+  --color-bakery-sage: #5B8C5A;
+  --color-bakery-raspberry: #C83E4D;
+  --color-bakery-border: #EFE4DC;
+  --color-bakery-sand: #F7EDE6;
+  --color-bakery-muted: #7A6B63;
+  --color-bakery-cream: #FFF9F5;
+
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', Inter, system-ui, sans-serif;
+
+  --shadow-soft: 0 4px 20px -2px rgba(30, 21, 42, 0.05), 0 2px 6px -1px rgba(30, 21, 42, 0.03);
+  --shadow-hover: 0 12px 30px -4px rgba(217, 93, 57, 0.12), 0 4px 10px -2px rgba(30, 21, 42, 0.06);
+  --shadow-modal: 0 25px 50px -12px rgba(30, 21, 42, 0.25);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: #FDF8F5;
+    color: #1E152A;
+  }
+}
+
+/* Custom scrollbar for boutique feel */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FDF8F5;
+}
+::-webkit-scrollbar-thumb {
+  background: #E0CEBE;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #D95D39;
+}
+
+/* Printable invoice styles */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #printable-invoice, #printable-invoice * {
+    visibility: visible;
+  }
+  #printable-invoice {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+    background: white;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
